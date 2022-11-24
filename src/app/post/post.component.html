@@ -1,0 +1,12 @@
+<ng-template let-state [ngIf]="state$ | async">
+  <ng-template [ngIf]="state.data">
+    <div class="font-bold text-3xl mb-4">{{ state.data.title }}</div>
+    <div>{{ state.data.body }}</div>
+  </ng-template>
+  <ng-template [ngIf]="state.process">
+    <div class="flex items-center justify-center h-72">
+      <mat-spinner diameter="18"></mat-spinner>
+    </div>
+  </ng-template>
+  <ng-template [ngIf]="state.error">Error</ng-template>
+</ng-template>

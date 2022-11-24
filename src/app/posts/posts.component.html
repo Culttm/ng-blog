@@ -1,0 +1,22 @@
+<ng-template let-state [ngIf]="state$ | async">
+  <ng-template [ngIf]="state.data">
+    <div class="grid gap-6 grid-cols-4">
+      <ng-template let-post ngFor [ngForOf]="state.data">
+        <mat-card class="!flex">
+          <div class="flex flex-col gap-4 justify-between">
+            <mat-card-title class="leading-tight">
+              <a class="hover:underline" [routerLink]="['.', post.id]">{{ post.title }}</a>
+            </mat-card-title>
+            <mat-card-content>{{ post.body }}</mat-card-content>
+          </div>
+        </mat-card>
+      </ng-template>
+    </div>
+  </ng-template>
+  <ng-template [ngIf]="state.process">
+    <div class="flex items-center justify-center h-72">
+      <mat-spinner diameter="18"></mat-spinner>
+    </div>
+  </ng-template>
+  <ng-template [ngIf]="state.error">Error</ng-template>
+</ng-template>
