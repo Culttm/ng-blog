@@ -1,0 +1,11 @@
+identifier: l4a4ufx4d75emdwc
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: blog
+homeFolder: /Users/culttm/Projects/blog
+distFolder: dist/blog
+outDir: /Users/culttm/Projects/blog/dist/static
+handle404: ''
+allowErrorCollect: true

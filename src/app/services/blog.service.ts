@@ -14,7 +14,7 @@ export class BlogService {
   }
 
   getPosts(): Observable<Posts> {
-    return this.httpClient.get<Posts>(`${BlogService.BASE_URL}/posts`)
+    return this.httpClient.get<Posts>(`${BlogService.BASE_URL}/posts?_limit=2`)
   }
 
   getPost(id: number): Observable<Post> {

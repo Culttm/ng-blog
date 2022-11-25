@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NotFoundComponent } from './not-found.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {NotFoundComponent} from './not-found.component';
 import {RouterModule} from "@angular/router";
 import {MatButtonModule} from "@angular/material/button";
-
 
 
 @NgModule({
@@ -12,13 +11,9 @@ import {MatButtonModule} from "@angular/material/button";
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: NotFoundComponent
-      }
-    ]),
+    RouterModule,
     MatButtonModule
   ]
 })
-export class NotFoundModule { }
+export class NotFoundModule {
+}
